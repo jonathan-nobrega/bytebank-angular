@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { TransferService } from 'src/app/services/transfer.service';
 
 @Component({
   selector: 'app-transactions',
@@ -8,10 +9,10 @@ import { Component, Input } from '@angular/core';
 export class TransactionsComponent {
   @Input() transfers: any[] = [];
 
-  // constructor(private service: TransferService) {}
+  constructor(private service: TransferService) {}
 
-  // ngOnInit(): void {
-  //   this.service.getAll().subscribe((x: any) => (this.transfers = x))
-  // }
+  ngOnInit(): void {
+    this.service.getAll().subscribe((x: any) => (this.transfers = x))
+  }
 
 }

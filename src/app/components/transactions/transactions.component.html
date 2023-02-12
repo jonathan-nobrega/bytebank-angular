@@ -9,7 +9,7 @@
       <tbody *ngIf="!!transfers; else emptyList">
         <tr class="tabela__linha" *ngFor="let transfer of transfers">
           <td class="tabela__conteudo">
-            {{ transfer.data | date: "short" }}
+            {{ transfer.date | date: "short" }}
           </td>
           <td class="tabela__conteudo">{{ transfer.value | currency }}</td>
           <td class="tabela__conteudo">{{ transfer.destiny }}</td>
