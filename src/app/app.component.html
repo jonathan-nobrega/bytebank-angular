@@ -1,3 +1,7 @@
-<app-new-transfer (onTransfer)="trans($event)">
-</app-new-transfer>
-<app-transactions></app-transactions>
+<header>
+  <a routerLink="transactions">Bytebank</a>
+  <a routerLink="new-transfer" routerLinkActive="active">New transfer</a>
+</header>
+<main>
+  <router-outlet></router-outlet>
+</main>

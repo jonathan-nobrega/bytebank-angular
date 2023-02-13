@@ -12,9 +12,9 @@ export class AppComponent {
 
   constructor(private service: TransferService) {}
 
-  trans($event: any) {
-    console.log('hey');
-    console.log($event);
-    this.service.add($event).subscribe((a) => console.log(a));
-  }
+  // trans($event: any) {
+  //   console.log('hey');
+  //   console.log($event);
+  //   this.service.add($event).subscribe((a) => console.log(a));
+  // }
 }
