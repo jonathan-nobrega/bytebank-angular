@@ -7,7 +7,7 @@ import { Transfer } from '../models/transfer.model';
 })
 export class TransferService {
   private transfersList: any[];
-  private url: string = 'http://localhost:3000/transfers/' // simulates database
+  private url = 'http://localhost:3000/transfers';
 
   constructor(private httpClient: HttpClient) {
     this.transfersList = [];

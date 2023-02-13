@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { TransferService } from 'src/app/services/transfer.service';
 
 @Component({
@@ -6,7 +6,7 @@ import { TransferService } from 'src/app/services/transfer.service';
   templateUrl: './transactions.component.html',
   styleUrls: ['./transactions.component.scss']
 })
-export class TransactionsComponent {
+export class TransactionsComponent implements OnInit {
   @Input() transfers: any[] = [];
 
   constructor(private service: TransferService) {}

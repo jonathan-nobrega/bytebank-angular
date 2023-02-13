@@ -13,13 +13,10 @@ export class NewTransferComponent {
 
   transfer() {
     console.log('Initialized a new transfer');
-    const valueToEmit = {
-      value: this.value,
-      destiny: this.destiny
-    }
-    console.log(valueToEmit)
-    this.onTransfer.emit(valueToEmit)
-    this.cleanFields()
+    const valueToEmit = { value: this.value, destiny: this.destiny };
+    this.onTransfer.emit(valueToEmit);
+
+    this.cleanFields();
   }
 
   cleanFields() {
